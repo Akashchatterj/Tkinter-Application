@@ -10,6 +10,57 @@ defaultbg = root.cget('bg')
 clicked=True
 count=0
 
+#disable all buttons
+def disable_all_buttons():
+	pass
+
+
+# check if someone wins
+def checkwinner():
+	global winner
+	winner=False
+	if b1["text"]=="X" and b2["text"]=="X" and b3["text"]=="X":
+		b1.config(bg='red')
+		b2.config(bg='red')
+		b3.config(bg='red')
+		winner=True
+		messagebox.showinfo("Tic-Tac-Toe-game","Congrats X wins!!!!")
+		disable_all_buttons()
+	elif b7["text"]=="X" and b8["text"]=="X" and b9["text"]=="X":
+		b7.config(bg='red')
+		b8.config(bg='red')
+		b9.config(bg='red')
+		winner=True
+		messagebox.showinfo("Tic-Tac-Toe-game","Congrats X wins!!!!")
+		disable_all_buttons()
+	elif b1["text"]=="X" and b4["text"]=="X" and b7["text"]=="X":
+		b1.config(bg='red')
+		b4.config(bg='red')
+		b7.config(bg='red')
+		winner=True
+		messagebox.showinfo("Tic-Tac-Toe-game","Congrats X wins!!!!")
+		disable_all_buttons()
+	elif b3["text"]=="X" and b6["text"]=="X" and b9["text"]=="X":
+		b1.config(bg='red')
+		b4.config(bg='red')
+		b7.config(bg='red')
+		winner=True
+		messagebox.showinfo("Tic-Tac-Toe-game","Congrats X wins!!!!")
+		disable_all_buttons()
+	elif b1["text"]=="X" and b5["text"]=="X" and b9["text"]=="X":
+		b1.config(bg='red')
+		b5.config(bg='red')
+		b9.config(bg='red')
+		winner=True
+		messagebox.showinfo("Tic-Tac-Toe-game","Congrats X wins!!!!")
+		disable_all_buttons()
+	elif b3["text"]=="X" and b5["text"]=="X" and b7["text"]=="X":
+		b3.config(bg='red')
+		b5.config(bg='red')
+		b7.config(bg='red')
+		winner=True
+		messagebox.showinfo("Tic-Tac-Toe-game","Congrats X wins!!!!")
+		disable_all_buttons()	
 
 #def button clicked function
 def b_click(b):
@@ -23,7 +74,7 @@ def b_click(b):
 		clicked=True
 		count+= 1
 	else:
-		messagebox.showerror("Tic-Tac-Toe","Hey,that box is already been selected\n select another box")
+		messagebox.showerror("Tic-Tac-Toe","Hey,that box is already been selected.\n Select another box!!!!!")
 
 
 #Buttons creation
